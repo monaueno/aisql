@@ -1,0 +1,14 @@
+[
+  {
+    "question": "which books were checked out by member 3?",
+    "sql": "SELECT 'The schema has no books or checkouts tables' AS error;",
+    "error": null,
+    "answer": "The database doesn't contain any books or checkouts tables, so I can't determine which books member 3 checked out. The query returned only an error message saying so."
+  },
+  {
+    "question": "what is the phone number for the location that ana works at?",
+    "sql": "SELECT s.phone_number FROM person p JOIN beauty_professional bp ON bp.id = p.id JOIN salon s ON s.salon_id = bp.salon_id WHERE LOWER(p.first_name) = 'ana';",
+    "error": null,
+    "answer": "Ana works at a location with the phone number 801-555-0101."
+  }
+]

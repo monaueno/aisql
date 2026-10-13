@@ -1,0 +1,8 @@
+[
+  {
+    "question": "What was the price of a Facial at the time of Ana\u2019s appointment on October 10?",
+    "sql": "SELECT pl.price_cents FROM appointments a JOIN person p ON p.id = a.customer_id JOIN service s ON s.id = a.service_id JOIN price_list pl ON pl.beauty_professional_id = a.beauty_professional_id AND pl.service_id = a.service_id WHERE p.first_name = 'Ana' AND s.service = 'Facial' AND strftime('%m-%d', a.start_time) = '10-10' AND pl.updated_at <= a.start_time;",
+    "error": null,
+    "answer": "The query found no price for a Facial at Ana's October 10 appointment. It returned no rows, so the data doesn't show a matching appointment, a price list entry effective before that appointment, or both."
+  }
+]

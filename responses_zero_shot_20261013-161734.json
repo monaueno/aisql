@@ -1,0 +1,8 @@
+[
+  {
+    "question": "Which customer booked the most appointments?",
+    "sql": "SELECT p.id, p.first_name, p.last_name, COUNT(a.id) AS appointment_count FROM appointments a JOIN customer c ON a.customer_id = c.id JOIN person p ON c.id = p.id GROUP BY p.id, p.first_name, p.last_name ORDER BY appointment_count DESC LIMIT 1;",
+    "error": null,
+    "answer": "Emma Wu booked the most appointments, with 3."
+  }
+]

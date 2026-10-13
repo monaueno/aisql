@@ -1,0 +1,14 @@
+[
+  {
+    "question": "what salon does ben work at?",
+    "sql": "SELECT s.name FROM person p JOIN beauty_professional bp ON bp.id = p.id JOIN salon s ON s.salon_id = bp.salon_id WHERE LOWER(p.first_name) = 'ben';",
+    "error": null,
+    "answer": "Ben works at Velvet Spa."
+  },
+  {
+    "question": "\u001b[A\u001b[A\u001b[B\u001b[B\u001b[B",
+    "sql": "SELECT NULL WHERE 0;",
+    "error": null,
+    "answer": "The question didn't come through. \"[A[A[B[B[B\" looks like terminal arrow-key escape codes rather than a real question.\n\nThe SQL query `SELECT NULL WHERE 0;` returned no rows, because `WHERE 0` is always false."
+  }
+]

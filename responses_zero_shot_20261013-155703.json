@@ -1,0 +1,8 @@
+[
+  {
+    "question": "how many appointments did customer 5 book?",
+    "sql": "SELECT COUNT(*) FROM appointments WHERE customer_id = 5;",
+    "error": null,
+    "answer": "Customer 5 booked 3 appointments."
+  }
+]

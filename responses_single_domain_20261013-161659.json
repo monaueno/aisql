@@ -1,0 +1,8 @@
+[
+  {
+    "question": "what is the phone number for the location that ana works at?",
+    "sql": "SELECT s.phone_number FROM person p JOIN beauty_professional bp ON bp.id = p.id JOIN salon s ON s.salon_id = bp.salon_id WHERE LOWER(p.first_name) = 'ana';",
+    "error": null,
+    "answer": "Ana works at the location with phone number 801-555-0101."
+  }
+]
